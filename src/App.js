@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Dice from "./Components/Dice/Dice";
+import Button from "./Components/Button/Button";
+import Player from "./Components/Player/Player";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    pointsToWin: 100,
+    dices: [null, null],
+    playerTurn: 0,
+    winner: false,
+    players: [
+      { currentScore: 0, totallScore: 0 },
+      { currentScore: 0, totallScore: 0 },
+    ],
+  };
+  render() {
+    return (
+      <div>
+        <Player
+          name="Player 1"
+          currentScore={this.state.players[0].currentScore}
+        />
+        <Button />
+        <Button />
+        <Button />
+        <Dice />
+        <Player name="Player 2" />
+      </div>
+    );
+  }
 }
 
 export default App;
