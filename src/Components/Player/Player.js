@@ -6,14 +6,14 @@ class Player extends React.Component {
   state = {
     active: true,
   };
-  isActive = () => {
-    let activePlayer = this.props.active;
-    if (activePlayer === 1) {
-      this.setState({ active: true });
-    } else {
-      this.setState({ active: false });
-    }
-  };
+  // isActive = () => {
+  //   let activePlayer = this.props.active;
+  //   if (activePlayer === 1) {
+  //     this.setState({ active: true });
+  //   } else {
+  //     this.setState({ active: false });
+  //   }
+  // };
 
   render() {
     return (
