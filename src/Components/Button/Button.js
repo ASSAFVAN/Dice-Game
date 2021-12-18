@@ -1,4 +1,5 @@
 import React from "react";
+
 if (module.hot) {
   module.hot.accept();
 }

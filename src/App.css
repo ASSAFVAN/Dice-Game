@@ -30,6 +30,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+.player-wrap-active {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-wrap {
+  display: flex;
+  flex-direction: column;
+}
 button {
   cursor: pointer;
   border: none;
@@ -54,4 +65,37 @@ button {
 }
 .current-score {
   color: white;
+}
+
+.active-player {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: crimson;
+  border-radius: 50%;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dice1 {
+  background: url(./images/dice-1.png) no-repeat center center/cover;
+}
+.dice2 {
+  background: url(./images/dice-2.png) no-repeat center center/cover;
+}
+.dice3 {
+  background: url(./images/dice-3.png) no-repeat center center/cover;
+}
+.dice4 {
+  background: url(./images/dice-4.png) no-repeat center center/cover;
+}
+.dice5 {
+  background: url(./images/dice-5.png) no-repeat center center/cover;
+}
+.dice6 {
+  background: url(./images/dice-6.png) no-repeat center center/cover;
 }
