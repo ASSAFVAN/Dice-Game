@@ -3,13 +3,10 @@ if (module.hot) {
   module.hot.accept();
 }
 class Dice extends React.Component {
+  state = { roll1: null, roll2: null, sum: null };
+
   render() {
-    return (
-      // <button onClick={this.onTrigger} className={this.props.text}>
-      //   {this.props.text}
-      // </button>
-      <div></div>
-    );
+    return <div>dice image goes here</div>;
   }
 }
 

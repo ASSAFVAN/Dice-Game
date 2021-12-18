@@ -7,10 +7,14 @@ class Player extends React.Component {
     return (
       <div className="player-wrap">
         <h1>{this.props.name}</h1>
-        <div className="player-wrap__total-score">Total Score</div>
-        <div className="score">{this.props.totalScore}</div>
-        <div className="player-wrap__current-score">Current Score</div>
-        <div className="score">{this.props.currentScore}</div>
+        <div className="player-wrap__tscore-container">
+          <div className="player-wrap__total-score">Total Score</div>
+          <div className="score">{this.props.totalScore}</div>
+        </div>
+        <div className="player-wrap__tscore-container">
+          <div className="player-wrap__current-score">Current Score</div>
+          <div className="score">{this.props.currentScore}</div>
+        </div>
       </div>
     );
   }

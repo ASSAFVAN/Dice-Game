@@ -5,10 +5,13 @@ if (module.hot) {
 class Button extends React.Component {
   render() {
     return (
-      // <button onClick={this.onTrigger} className={this.props.text}>
-      //   {this.props.text}
-      // </button>
-      <button></button>
+      <button
+        onClick={(e) => {
+          this.props.handleClick(e);
+        }}
+      >
+        {this.props.title}{" "}
+      </button>
     );
   }
 }
