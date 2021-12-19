@@ -16,11 +16,6 @@ class App extends React.Component {
     player2TotalScore: 0,
   };
 
-  handleRollDice = () => {
-    this.rollDice();
-    // this.updateScore();
-  };
-
   rollDice = () => {
     const rollRandomNumbers = [
       Math.floor(Math.random() * 6) + 1,
@@ -59,35 +54,6 @@ class App extends React.Component {
     }
   };
 
-  // handleDice = () => {
-  //   const diceList = [Math.ceil(Math.random() * 6), Math.ceil(Math.random() * 6)];
-  //   const [a, b] = diceList;
-  //   let currentScore = a + b;
-  //   this.setState({ dice1: a, dice2: b, disable: true });
-  //   const { p1, p2, winScore } = this.state;
-  //   if (p1.total >= winScore || p2.total >= winScore) {
-  //     alert("YOU ARE THE WINNER");
-  //     return;
-  //   }
-  //   let active = this.activePlayer();
-  //   if (active === "p1") {
-  //     currentScore !== 12 ? this.updatPlayerScore("p1", currentScore) : this.resetPlayerScore("p1");
-  //   } else {
-  //     currentScore !== 12 ? this.updatPlayerScore("p2", currentScore) : this.resetPlayerScore("p2");
-  //   }
-  // };
-
-  // updateScore = () => {
-  //   if (this.state.currentPlayer === 1) {
-  //     this.setState({
-  //       player1CurrentScore:
-  //         prevState.player1CurrentScore +
-  //         prevState.dice[0] +
-  //         prevState.dices[1],
-  //     });
-  //   }
-  // };
-
   resetState = () => {
     this.setState({
       pointsToWin: 100,
@@ -118,14 +84,6 @@ class App extends React.Component {
       this.setState({ winner: true });
     }
   };
-
-  // handleDoubleSix = () => {
-  //   const diceOne = this.state.dices[0];
-  //   const diceTwo = this.state.dices[1];
-  //   if (diceOne + diceTwo === 12) {
-  //     console.log("double six");
-  //   }
-  // };
 
   holdFunc = () => {
     this.isWinner();
@@ -161,11 +119,12 @@ class App extends React.Component {
           active={this.state.currentPlayer}
           currentScore={this.state.player1CurrentScore}
           totalScore={this.state.player1TotalScore}
+          winner={this.state.winner}
         />
         <div className="button-wrap">
           <Button title="New Game" handleClick={this.resetState} />
           <Dice roll={this.state.dices} />
-          <Button title="Roll Dice" handleClick={this.handleRollDice} />
+          <Button title="Roll Dice" handleClick={this.rollDice} />
           <Button title="Hold" handleClick={this.holdFunc} />
         </div>
         <Player
@@ -173,6 +132,7 @@ class App extends React.Component {
           active={this.state.currentPlayer}
           currentScore={this.state.player2CurrentScore}
           totalScore={this.state.player2TotalScore}
+          winner={this.state.winner}
         />
       </div>
     );

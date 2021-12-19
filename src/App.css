@@ -29,14 +29,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem 0 1rem;
 }
-.player-wrap-active {
-  background-color: lightgray;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .button-wrap {
   display: flex;
   flex-direction: column;
@@ -72,6 +67,13 @@ button {
   width: 0.5rem;
   background-color: crimson;
   border-radius: 50%;
+}
+
+.winner {
+  background-color: yellow;
+}
+.hide {
+  display: none;
 }
 
 .dice {
