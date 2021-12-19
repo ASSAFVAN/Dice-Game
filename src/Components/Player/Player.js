@@ -5,7 +5,7 @@ if (module.hot) {
 class Player extends React.Component {
   render() {
     let styling;
-    let isVisible;
+    // let isVisible;
     if (this.props.name === `PLAYER ${this.props.active}`) {
       styling = { backgroundColor: "lightgray" };
     }
